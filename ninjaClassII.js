@@ -10,11 +10,15 @@ class Ninja{
         }
 
         this.kick = function( ninja ) {
-            let injury = strength * 15;
-            ninja.health -= injury;
-            console.log(`${ninja.name} was kicked by ${this.name} and lost ${injury} in Health!`);
+            if( ninja instanceof Ninja){
+                let injury = strength * 15;
+                ninja.health -= injury;
+                console.log(`${ninja.name} was kicked by ${this.name} and lost ${injury} in Health!`);
+            }
+            else{
+                console.log( `${ninja.name} is not a ninja!!!` );
+            }
         }
-
     }
 
     sayName(){
@@ -27,8 +31,13 @@ class Ninja{
     }
 
     punch( ninja ){
-        ninja.health -= 5;
-        console.log( `${ninja.name} was punched by ${this.name} and lost 5 in Health!` );
+        if( ninja instanceof Ninja ){
+            ninja.health -= 5;
+            console.log( `${ninja.name} was punched by ${this.name} and lost 5 in Health!` );
+        }
+        else{
+            console.log( `${ninja.name} is not a ninja!!!` );
+        }
     }
 
 }
