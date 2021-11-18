@@ -6,3 +6,6 @@ Add a new method to Ninja called .punch(). This method will take another Ninja i
 
 .kick()
 Now add a method to your Ninja class called .kick(). Kick will subtract 15 Health for each point of Strength the calling Ninja has, and  .punch() will take another Ninja instance.
+
+Validations
+Update .punch() and .kick() so that they only accept Instances of Ninja.
